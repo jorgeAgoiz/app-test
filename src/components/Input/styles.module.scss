@@ -1,0 +1,16 @@
+input {
+    min-width: 200px;
+    text-align: center;
+    border:1px solid #854D27; 
+}
+
+@media (max-width: 700px) {
+    input {
+        min-width: 180px;    
+    } 
+}
+@media (max-width: 500px) {
+    input {
+        min-width: 170px;    
+    } 
+}
