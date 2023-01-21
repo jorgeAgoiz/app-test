@@ -1,4 +1,4 @@
-import style from './styles.module.scss'
+import style from './_styles.module.scss'
 
 interface Props {
   name: string
@@ -6,6 +6,7 @@ interface Props {
   defaultValue?: string | number
   onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void
   required: boolean
+  placeholder?: string
 }
 
 const Input = ({
@@ -14,6 +15,7 @@ const Input = ({
   defaultValue,
   onChange,
   required,
+  placeholder,
 }: Props): JSX.Element => {
   return (
     <input
@@ -23,6 +25,7 @@ const Input = ({
       defaultValue={defaultValue}
       onChange={onChange}
       required={required}
+      placeholder={placeholder}
     />
   )
 }

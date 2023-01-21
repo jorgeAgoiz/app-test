@@ -1,0 +1,18 @@
+@function hexToRGB($hex) { 
+    @return red($hex), green($hex), blue($hex); 
+}
+
+@mixin respond($breakpoint) {
+
+    @if($breakpoint == desktop)  {
+      @media (max-width: 900px) { @content }
+    }
+
+    @if($breakpoint == tablet)  {
+      @media (max-width: 660px) { @content }
+    }
+
+    @if($breakpoint == mobile)  {
+        @media (max-width: 450px) { @content }
+      }
+  }

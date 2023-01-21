@@ -1,8 +1,10 @@
+import style from './_styles.module.scss'
+
 const Home = (): JSX.Element => {
   return (
-    <div>
-      <h1>Pantalla de inicio</h1>
-    </div>
+    <main className={style.main}>
+      <h1 className={style.main__title}>Cleverpy Test</h1>
+    </main>
   )
 }
 
