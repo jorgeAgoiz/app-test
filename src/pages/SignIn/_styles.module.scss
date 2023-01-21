@@ -1,3 +1,5 @@
+@use '../../sass/_mixins.scss' as *;
+
 .main {
     width: 100%;
     height: 80vh;
@@ -11,6 +13,10 @@
         font-size: 3.5rem;
         color: var(--color-black);
         text-align: center;
+
+        @include respond(tablet) {
+            font-size: 2.5rem;
+        }
     }
 }
 
