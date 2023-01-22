@@ -23,7 +23,12 @@ const PostCard = ({ post }: Props): JSX.Element => {
       <article className={style.post}>
         <h1 className={style.post__title}>{post.title}</h1>
         <p className={style.post__body}>{post.body}</p>
-        <Button text="Editar" type="button" handleClick={handleClick} />
+        <Button
+          category="basic"
+          text="Editar"
+          type="button"
+          handleClick={handleClick}
+        />
       </article>
       {modal && <PostDetails post={post} handleClose={() => setModal(false)} />}
     </>

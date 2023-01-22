@@ -2,6 +2,7 @@ import { RxAvatar } from 'react-icons/rx'
 import { NavigateFunction, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import { FAKE_AVATAR } from '../../utils/constants'
+import Button from '../Button'
 import style from './_styles.module.scss'
 
 const SessionBtns = (): JSX.Element => {
@@ -28,13 +29,12 @@ const SessionBtns = (): JSX.Element => {
           className={style.session__image}
         />
       )}
-      <button
-        className={style.session__button}
-        onClick={handleClick}
-        title={!state.isLogged ? 'Iniciar Sesión' : 'Cerrar sesión'}
-      >
-        {!state.isLogged ? 'Iniciar Sesión' : 'Cerrar sesión'}
-      </button>
+      <Button
+        category="session"
+        handleClick={handleClick}
+        text={!state.isLogged ? 'Iniciar Sesión' : 'Cerrar sesión'}
+        type="button"
+      />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { GrLinkNext, GrLinkPrevious } from 'react-icons/gr'
 import { NavigateFunction, useNavigate } from 'react-router-dom'
+import Button from '../../components/Button'
 import PostCard from '../../components/PostCard'
 import { usePost } from '../../context/PostContext'
 import usePagination from '../../hooks/usePagination'
@@ -39,23 +40,27 @@ const Posts = (): JSX.Element => {
       </section>
       {state.length > 0 && (
         <section className={style.pagination}>
-          <button
-            className={style.pagination__button}
-            onClick={handlePrevious}
+          <Button
+            text="Página anterior"
+            handleClick={handlePrevious}
             disabled={currentPage <= 1}
+            type="button"
+            category="pagination"
           >
-            <GrLinkPrevious className={style.pagination__button__icon} />
-          </button>
+            <GrLinkPrevious className={style.pagination__icon} />
+          </Button>
           <p className={style.pagination__text}>
             Página {currentPage} de {Math.ceil(state.posts.length / PER_PAGE)}
           </p>
-          <button
-            className={style.pagination__button}
-            onClick={handleNext}
+          <Button
+            text="Siguiente página"
+            handleClick={handleNext}
             disabled={currentPage === Math.ceil(state.posts.length / PER_PAGE)}
+            type="button"
+            category="pagination"
           >
-            <GrLinkNext className={style.pagination__button__icon} />
-          </button>
+            <GrLinkNext className={style.pagination__icon} />
+          </Button>
         </section>
       )}
     </main>

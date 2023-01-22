@@ -45,11 +45,13 @@ const PostDetails = ({ post, handleClose }: Props): JSX.Element => {
               <h2 className={style.content__body}>{post.body}</h2>
               <div className={style.content__actions}>
                 <Button
+                  category="basic"
                   text="Editar"
                   type="button"
                   handleClick={() => setEdit(true)}
                 />
                 <Button
+                  category="basic"
                   text="Eliminar"
                   type="button"
                   handleClick={handleDelete}

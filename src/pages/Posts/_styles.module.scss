@@ -37,26 +37,14 @@
         gap: 1.4rem;
     }
 
-    &__button {
-        background-color: var(--color-white);
-        width: 3rem;
-        height: 3rem;
-        border: 3px solid var(--color-black);
-        border-radius: 0.7rem;
-        transition: .3s all ease-in-out;
 
-        &__icon {
-            width: 1.6rem;
-            height: 1.6rem;
-            color: var(--color-navy);
-        }
 
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-            background-color: var(--color-teal);
-        }
+    &__icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        color: var(--color-navy);
     }
+
 
     &__text {
         font-size: 1.2rem;

@@ -37,8 +37,13 @@ const EditPost = ({ id, title, body, onCancel }: Props): JSX.Element => {
           className={style.form__content}
         />
         <div className={style.form__actions}>
-          <Button text="Guardar" type="submit" />
-          <Button text="Cancelar" type="button" handleClick={onCancel} />
+          <Button category="basic" text="Guardar" type="submit" />
+          <Button
+            category="basic"
+            text="Cancelar"
+            type="button"
+            handleClick={onCancel}
+          />
         </div>
       </form>
     </>

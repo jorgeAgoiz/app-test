@@ -1,6 +1,6 @@
 @use '../../sass/_mixins.scss' as *;
 
-.button {
+.basic {
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
@@ -34,5 +34,49 @@
 
   @include respond(tablet) {
     padding: 13px 50px 13px;
+  }
+}
+
+.session {
+  width: 160px;
+  height: 50px;
+  background-color: var(--color-beige);
+  border: 3px solid var(--color-sage);
+  color: var(--color-black);
+  border-radius: 8px;
+  font-size: 1.3rem;
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-teal);
+    border: 3px solid var(--color-beige);
+    cursor: pointer;
+  }
+
+  @include respond(mobile) {
+    width: 110px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+.pagination {
+  background-color: var(--color-white);
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid var(--color-black);
+  border-radius: 0.7rem;
+  transition: .3s all ease-in-out;
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    color: var(--color-navy);
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: var(--color-teal);
   }
 }

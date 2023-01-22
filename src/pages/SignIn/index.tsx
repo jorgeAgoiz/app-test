@@ -25,7 +25,7 @@ const SignIn = (): JSX.Element => {
           placeholder="Contraseña"
           className={style.form__input}
         />
-        <Button text="Iniciar sesión" type="submit" />
+        <Button category="basic" text="Iniciar sesión" type="submit" />
         {error && <p className={style.form__error}>{error}</p>}
       </form>
     </main>
