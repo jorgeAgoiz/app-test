@@ -12,6 +12,11 @@
 
 .title {
     font-size: 2rem;
+    font-family: IBM Plex Mono;
+
+    @include respond(mobile) {
+        font-size: 1rem;
+    }
 }
 
 .list {
@@ -49,6 +54,7 @@
     &__text {
         font-size: 1.2rem;
         font-weight: bold;
+        font-family: IBM Plex Mono;
 
         @include respond(mobile) {
             font-size: 1rem;

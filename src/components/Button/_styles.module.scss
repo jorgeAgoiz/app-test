@@ -14,6 +14,8 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   z-index: 1;
+  color: var(--color-white);
+  font-family: IBM Plex Mono;
 
   &:after {
     content: "";
@@ -30,6 +32,7 @@
   &:hover:after {
     top: 0px;
     left: 0px;
+    background-color: var(--color-navy);
   }
 
   @include respond(tablet) {
@@ -44,7 +47,8 @@
   border: 3px solid var(--color-sage);
   color: var(--color-black);
   border-radius: 8px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  font-family: IBM Plex Mono;
 
   &:hover {
     color: var(--color-white);
@@ -56,7 +60,7 @@
   @include respond(mobile) {
     width: 110px;
     height: 40px;
-    font-size: 1rem;
+    font-size: .8rem;
   }
 }
 

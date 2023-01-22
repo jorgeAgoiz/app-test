@@ -46,6 +46,8 @@
     &__title {
         font-size: 4rem;
         color: var(--color-teal);
+        font-family: IBM Plex Mono;
+        text-align: center;
 
         @include respond(tablet) {
             font-size: 3rem;
@@ -59,26 +61,32 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 80%;
     height: 60vh;
 
+    @include respond(tablet) {
+        width: 95%;
+    }
+
     &__title {
-        font-size: 3rem;
+        font-size: 2.4rem;
         text-align: center;
+        font-family: Aldrich;
 
         @include respond(tablet) {
-            font-size: 2.4rem;
+            font-size: 1.5rem;
         }
     }
 
     &__body {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         text-align: justify;
         padding-left: 1rem;
         padding-right: 1rem;
+        font-family: Lekton;
 
         @include respond(tablet) {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 
@@ -92,5 +100,10 @@
         gap: 2rem;
         padding-top: .8rem;
         padding-bottom: .8rem;
+
+        @include respond(tablet) {
+            padding-top: .4rem;
+            padding-bottom: .4rem;
+        }
     }
 }

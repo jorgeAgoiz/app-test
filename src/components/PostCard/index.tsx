@@ -14,7 +14,7 @@ interface Props {
 const PostCard = ({ post }: Props): JSX.Element => {
   const [modal, setModal] = useState<State['modal']>(false)
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     setModal(true)
   }
 
@@ -25,7 +25,7 @@ const PostCard = ({ post }: Props): JSX.Element => {
         <p className={style.post__body}>{post.body}</p>
         <Button
           category="basic"
-          text="Editar"
+          text="Detalles"
           type="button"
           handleClick={handleClick}
         />

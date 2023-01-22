@@ -1,3 +1,6 @@
+@use '../../sass/_animations.scss' as *;
+@use '../../sass/_mixins.scss' as *;
+
 .footer {
     width: 100%;
     background-color: var(--color-teal);
@@ -12,6 +15,18 @@
 
     &__text {
         color: var(--color-white);
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        font-family: Farsan;
+
+        @include respond(mobile) {
+            font-size: 1rem;
+        }
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+        color: var(--color-error);
+        animation: 1.2s infinite alternate beats;
     }
 }
