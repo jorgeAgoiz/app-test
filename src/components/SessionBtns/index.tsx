@@ -27,7 +27,11 @@ const SessionBtns = (): JSX.Element => {
           className={style.session__image}
         />
       )}
-      <button className={style.session__button} onClick={handleClick}>
+      <button
+        className={style.session__button}
+        onClick={handleClick}
+        title={!state.isLogged ? 'Iniciar Sesión' : 'Cerrar sesión'}
+      >
         {!state.isLogged ? 'Iniciar Sesión' : 'Cerrar sesión'}
       </button>
     </div>

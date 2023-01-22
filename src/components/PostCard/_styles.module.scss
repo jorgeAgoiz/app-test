@@ -1,0 +1,27 @@
+.post {
+    width: 280px;
+    height: 400px;
+    padding: 1.2rem;
+    background-color: var(--color-beige);
+    border-radius: 12px;
+    border: 2px solid var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s background-color ease-in-out;
+
+    &:hover {
+        background-color: var(--color-white);
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    &__body {
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+}

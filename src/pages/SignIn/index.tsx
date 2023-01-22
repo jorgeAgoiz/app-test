@@ -1,49 +1,10 @@
-import { useState } from 'react'
-import { NavigateFunction, useNavigate } from 'react-router-dom'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
-import { useAuth } from '../../context/AuthContext'
-import { emailValidator } from '../../utils/emailValidator'
+import useSignIn from '../../hooks/useSignin'
 import style from './_styles.module.scss'
 
-interface State {
-  email: string
-  password: string
-  error: string | null
-}
-
 const SignIn = (): JSX.Element => {
-  const { dispatch } = useAuth()
-  const navigate: NavigateFunction = useNavigate()
-  const [email, setEmail] = useState<State['email']>('')
-  const [password, setPassword] = useState<State['password']>('')
-  const [error, setError] = useState<State['error']>(null)
-
-  const handleChange = (evt: React.ChangeEvent<HTMLInputElement>): void => {
-    const { name } = evt.currentTarget
-    if (name.toLowerCase() === 'email') {
-      setEmail(evt.target.value)
-    }
-    if (name.toLowerCase() === 'password') {
-      setPassword(evt.target.value)
-    }
-  }
-
-  const handleSubmit = (evt: React.FormEvent<HTMLFormElement>): void => {
-    evt.preventDefault()
-    if (!emailValidator(email)) {
-      return setError('Introduzca un correo electronico válido')
-    }
-    setError(null)
-    dispatch({
-      type: 'login',
-      payload: {
-        email,
-        password,
-      },
-    })
-    return navigate('/posts', { replace: true })
-  }
+  const { handleChange, handleSubmit, error } = useSignIn()
 
   return (
     <main className={style.main}>
@@ -64,9 +25,8 @@ const SignIn = (): JSX.Element => {
           placeholder="Contraseña"
         />
         <Button text="Iniciar sesión" type="submit" />
+        {error && <p className={style.form__error}>{error}</p>}
       </form>
-      {error}
-      {/* Estilar esto un poco mejor */}
     </main>
   )
 }
