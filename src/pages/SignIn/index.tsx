@@ -1,5 +1,4 @@
 import Button from '../../components/Button'
-import Input from '../../components/Input'
 import useSignIn from '../../hooks/useSignin'
 import style from './_styles.module.scss'
 
@@ -10,19 +9,21 @@ const SignIn = (): JSX.Element => {
     <main className={style.main}>
       <h1 className={style.main__title}>Iniciar Sesión</h1>
       <form className={style.form} onSubmit={handleSubmit}>
-        <Input
+        <input
           name="Email"
           type="text"
           onChange={handleChange}
           required={true}
           placeholder="Email"
+          className={style.form__input}
         />
-        <Input
+        <input
           name="password"
           type="password"
           onChange={handleChange}
           required={true}
           placeholder="Contraseña"
+          className={style.form__input}
         />
         <Button text="Iniciar sesión" type="submit" />
         {error && <p className={style.form__error}>{error}</p>}

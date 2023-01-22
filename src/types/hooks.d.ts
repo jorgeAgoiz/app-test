@@ -7,5 +7,16 @@ export interface UseSignIn {
 export interface UsePagination {
   currentData: Array<Post>
   currentPage: number
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>
+  handleNext: () => void
+  handlePrevious: () => void
+}
+
+export interface UseEdit {
+  handleChange: (
+    evt:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => void
+  handleSubmit: (evt: React.FormEvent<HTMLFormElement>) => void
+  error: string | null
 }

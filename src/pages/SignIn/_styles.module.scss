@@ -31,9 +31,23 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 
+    &__input {
+        width: 360px;
+        height: 30px;
+        font-size: 1.1rem;
+        padding: 5px;
+        border: 2px solid var(--color-navy);
+        text-align: center;
+
+        @include respond(tablet) {
+            width: 250px;
+            font-size: 1rem;
+        }
+    }
+
     &__error {
-       color: var(--color-error);
-       font-size: 1.2rem;
-       letter-spacing: 1px; 
+        color: var(--color-error);
+        font-size: 1.2rem;
+        letter-spacing: 1px;
     }
 }

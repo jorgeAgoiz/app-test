@@ -1,5 +1,5 @@
 import errorImage from '../../assets/error-image.jpg'
-import style from './styles.module.scss'
+import style from './_styles.module.scss'
 
 const ErrorPage = (): JSX.Element => {
   return (

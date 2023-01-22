@@ -4,11 +4,22 @@ interface Props {
   text: string
   type: 'button' | 'submit' | 'reset' | undefined
   handleClick?: () => void
+  disabled?: boolean
 }
 
-const Button = ({ text, type, handleClick }: Props): JSX.Element => {
+const Button = ({
+  text,
+  type = 'button',
+  handleClick,
+  disabled = false,
+}: Props): JSX.Element => {
   return (
-    <button className={style.button} type={type} onClick={handleClick}>
+    <button
+      className={style.button}
+      type={type}
+      onClick={handleClick}
+      disabled={disabled}
+    >
       {text}
     </button>
   )

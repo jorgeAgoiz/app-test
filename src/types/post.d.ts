@@ -10,9 +10,17 @@ export interface PostState {
   length: number
 }
 
+export interface Payload {
+  id?: number
+  title?: string
+  body?: string
+  posts?: Array<Post>
+  length?: number
+}
+
 export interface PostAction {
   type: 'fetch' | 'delete' | 'update'
-  payload: PostState
+  payload: Payload
 }
 
 export interface PostDispatch {

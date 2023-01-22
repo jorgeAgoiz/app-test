@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { usePost } from '../context/PostContext'
 import { UsePagination } from '../types/hooks'
 import { Post } from '../types/post'
 import { PER_PAGE } from '../utils/constants'
@@ -8,23 +9,36 @@ interface State {
   currentPage: number
 }
 
-const usePagination = (data: Array<Post>): UsePagination => {
+const usePagination = (): UsePagination => {
+  const { state } = usePost()
   const [currentData, setCurrentData] = useState<State['currentData']>([])
   const [currentPage, setCurrentPage] = useState<State['currentPage']>(1)
 
   useEffect(() => {
-    if (data.length > 0) {
+    if (state.length > 0) {
       setCurrentData(
-        data.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE)
+        state.posts.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE)
       )
     }
     return (): void => {}
-  }, [currentPage, data])
+  }, [currentPage, state.length])
+
+  const handlePrevious = (): void => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1)
+    }
+  }
+  const handleNext = (): void => {
+    if (currentPage < Math.ceil(state.posts.length / PER_PAGE)) {
+      setCurrentPage(currentPage + 1)
+    }
+  }
 
   return {
     currentData,
     currentPage,
-    setCurrentPage,
+    handleNext,
+    handlePrevious,
   }
 }
 

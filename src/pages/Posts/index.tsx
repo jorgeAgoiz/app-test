@@ -10,9 +10,8 @@ import style from './_styles.module.scss'
 
 const Posts = (): JSX.Element => {
   const { state, dispatch } = usePost()
-  const { currentData, currentPage, setCurrentPage } = usePagination(
-    state.posts
-  )
+  const { currentData, currentPage, handleNext, handlePrevious } =
+    usePagination()
   const navigate: NavigateFunction = useNavigate()
 
   useEffect(() => {
@@ -31,42 +30,31 @@ const Posts = (): JSX.Element => {
     }
   }, [])
 
-  const onHandlePrevious = (): void => {
-    if (currentPage > 1) {
-      return setCurrentPage(currentPage - 1)
-    }
-  }
-  const onHandleNext = (): void => {
-    if (currentPage < Math.ceil(state.posts.length / PER_PAGE)) {
-      return setCurrentPage(currentPage + 1)
-    }
-  }
-
   return (
     <main className={style.main}>
-      <h1>Listado de Posts</h1>
+      <h1 className={style.title}>Listado de Posts</h1>
       <section className={style.list}>
         {currentData.length > 0 &&
-          currentData.map((post) => <PostCard key={post.id} elem={post} />)}
+          currentData.map((post) => <PostCard key={post.id} post={post} />)}
       </section>
       {state.length > 0 && (
         <section className={style.pagination}>
           <button
             className={style.pagination__button}
-            onClick={onHandlePrevious}
+            onClick={handlePrevious}
             disabled={currentPage <= 1}
           >
-            <GrLinkPrevious />
+            <GrLinkPrevious className={style.pagination__button__icon} />
           </button>
-          <p>
+          <p className={style.pagination__text}>
             Página {currentPage} de {Math.ceil(state.posts.length / PER_PAGE)}
           </p>
           <button
             className={style.pagination__button}
-            onClick={onHandleNext}
+            onClick={handleNext}
             disabled={currentPage === Math.ceil(state.posts.length / PER_PAGE)}
           >
-            <GrLinkNext />
+            <GrLinkNext className={style.pagination__button__icon} />
           </button>
         </section>
       )}
