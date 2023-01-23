@@ -29,10 +29,12 @@ const SessionBtns = (): JSX.Element => {
           src={FAKE_AVATAR}
           title={state.email}
           className={style.session__image}
+          aria-label="Foto de perfil"
         />
       )}
       <Button
         category="session"
+        ariaLabel={!state.isLogged ? 'Iniciar Sesión' : 'Cerrar Sesión'}
         handleClick={handleClick}
         text={
           !state.isLogged

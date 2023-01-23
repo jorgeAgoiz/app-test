@@ -22,7 +22,7 @@ const PostCard = ({ post }: Props): JSX.Element => {
 
   return (
     <>
-      <article className={style.post}>
+      <article className={style.post} aria-label={post.title}>
         <h1 className={style.post__title}>{post.title}</h1>
         <p className={style.post__body}>{post.body}</p>
         <Button
@@ -30,6 +30,7 @@ const PostCard = ({ post }: Props): JSX.Element => {
           text={t('posts.card.buttons.details')}
           type="button"
           handleClick={handleClick}
+          ariaLabel={`Detalles de ${post.title}`}
         />
       </article>
       {modal && <PostDetails post={post} handleClose={() => setModal(false)} />}

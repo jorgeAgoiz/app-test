@@ -56,6 +56,10 @@
             "buttons": {
                 "save": "Save",
                 "cancel": "Cancel"
+            },
+            "placeholders": {
+                "title": "Title",
+                "body": "Content"
             }
         },
         "card": {

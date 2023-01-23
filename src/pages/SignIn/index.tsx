@@ -27,7 +27,12 @@ const SignIn = (): JSX.Element => {
           placeholder={t('login_form.placeholders.password')!}
           className={style.form__input}
         />
-        <Button category="basic" text={t('login_form.button')} type="submit" />
+        <Button
+          ariaLabel="Entrar"
+          category="basic"
+          text={t('login_form.button')}
+          type="submit"
+        />
         {error && <p className={style.form__error}>{error}</p>}
       </form>
     </main>

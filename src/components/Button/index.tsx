@@ -10,6 +10,7 @@ interface Props {
   disabled?: boolean
   category: 'session' | 'basic' | 'pagination'
   children?: ReactNode
+  ariaLabel?: string
 }
 
 const Button = ({
@@ -19,6 +20,7 @@ const Button = ({
   disabled = false,
   category,
   children,
+  ariaLabel,
 }: Props): JSX.Element => {
   const className: string = cx({
     session: category === 'session',
@@ -33,6 +35,7 @@ const Button = ({
       onClick={handleClick}
       disabled={disabled}
       title={text}
+      aria-label={ariaLabel}
     >
       {!children ? text : children}
     </button>

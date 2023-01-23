@@ -26,6 +26,7 @@ const Footer = (): JSX.Element => {
             category="session"
             text={t('footer.language.english_btn')}
             handleClick={handleLanguage}
+            ariaLabel="Cambiar al idioma inglés"
           />
         ) : (
           <Button
@@ -33,6 +34,7 @@ const Footer = (): JSX.Element => {
             category="session"
             text={t('footer.language.spanish_btn')}
             handleClick={handleLanguage}
+            ariaLabel="Cambiar al idioma español"
           />
         )}
       </div>

@@ -29,6 +29,7 @@ const EditPost = ({ id, title, body, onCancel }: Props): JSX.Element => {
         type="text"
         defaultValue={title}
         className={style.form__title}
+        placeholder={t('posts.edit.placeholders.title')!}
       />
       <textarea
         defaultValue={body}
@@ -36,18 +37,21 @@ const EditPost = ({ id, title, body, onCancel }: Props): JSX.Element => {
         name="body"
         onChange={handleChange}
         className={style.form__content}
+        placeholder={t('posts.edit.placeholders.body')!}
       />
       <div className={style.form__actions}>
         <Button
           category="basic"
           text={t('posts.edit.buttons.save')}
           type="submit"
+          ariaLabel="Guardar cambios"
         />
         <Button
           category="basic"
           text={t('posts.edit.buttons.cancel')}
           type="button"
           handleClick={onCancel}
+          ariaLabel="Cancelar edición"
         />
       </div>
     </form>

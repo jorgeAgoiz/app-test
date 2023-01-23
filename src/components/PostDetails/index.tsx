@@ -33,6 +33,8 @@ const PostDetails = ({ post, handleClose }: Props): JSX.Element => {
             className={style.dialog__close__icon}
             onClick={handleClose}
             title={t('posts.card.buttons.close')!}
+            aria-label="Cerrar Post"
+            role="button"
           />
         </div>
         {!edit ? (
@@ -45,20 +47,34 @@ const PostDetails = ({ post, handleClose }: Props): JSX.Element => {
         <section className={style.content}>
           {!edit ? (
             <>
-              <h1 className={style.content__title}>{post.title}</h1>
-              <h2 className={style.content__body}>{post.body}</h2>
+              <h1
+                role="heading"
+                aria-label="Título del Post"
+                className={style.content__title}
+              >
+                {post.title}
+              </h1>
+              <h2
+                role="heading"
+                aria-label="Contenido del Post"
+                className={style.content__body}
+              >
+                {post.body}
+              </h2>
               <div className={style.content__actions}>
                 <Button
                   category="basic"
                   text={t('posts.card.buttons.edit')}
                   type="button"
                   handleClick={() => setEdit(true)}
+                  ariaLabel="Editar el Post"
                 />
                 <Button
                   category="basic"
                   text={t('posts.card.buttons.delete')}
                   type="button"
                   handleClick={handleDelete}
+                  ariaLabel="Eliminar el Post"
                 />
               </div>
             </>
