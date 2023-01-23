@@ -8,6 +8,10 @@
     align-items: center;
     margin-bottom: 5rem;
     gap: 1rem;
+
+    @include responsive(tablet) {
+        margin-bottom: 12rem;
+    }
 }
 
 .title {

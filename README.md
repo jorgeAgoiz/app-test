@@ -1,6 +1,6 @@
 # POSTS APP
 
-##### Cleverpy
+#### Cleverpy
 
 ## Tecnologías 🚀
 
@@ -25,6 +25,7 @@
 
 1. **Node** >= 14v
 2. **npm**
+3. **GIT**
 
 ## Instalación & Despliegue 🔧
 
@@ -56,6 +57,7 @@ Para realizar la **build** del proyecto:
 
 ```
 npm run build
+npm run preview
 ```
 
 ## Autor ✒️
