@@ -1,4 +1,4 @@
-@mixin respond($breakpoint) {
+@mixin responsive($breakpoint) {
 
   @if($breakpoint ==desktop) {
     @media (max-width: 900px) {

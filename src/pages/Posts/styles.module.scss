@@ -14,7 +14,7 @@
     font-size: 2rem;
     font-family: IBM Plex Mono;
 
-    @include respond(mobile) {
+    @include responsive(mobile) {
         font-size: 1rem;
     }
 }
@@ -37,7 +37,7 @@
     justify-content: center;
     align-items: center;
 
-    @include respond(mobile) {
+    @include responsive(mobile) {
         width: 100%;
         gap: 1.4rem;
     }
@@ -56,7 +56,7 @@
         font-weight: bold;
         font-family: IBM Plex Mono;
 
-        @include respond(mobile) {
+        @include responsive(mobile) {
             font-size: 1rem;
         }
     }

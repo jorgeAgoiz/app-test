@@ -16,11 +16,11 @@
         font-size: 2.4rem;
         font-family: IBM Plex Mono;
 
-        @include respond(tablet) {
+        @include responsive(tablet) {
             font-size: 1.6rem;
         }
 
-        @include respond(mobile) {
+        @include responsive(mobile) {
             font-size: 1.2rem;
         }
     }
@@ -31,12 +31,12 @@
         border-radius: 8px;
         border: 5px solid var(--color-beige);
 
-        @include respond(tablet) {
+        @include responsive(tablet) {
             width: 420px;
             height: 267px;
         }
 
-        @include respond(mobile) {
+        @include responsive(mobile) {
             width: 300px;
             height: 187px;
         }

@@ -1,4 +1,4 @@
-import style from './_styles.module.scss'
+import style from './styles.module.scss'
 
 const Home = (): JSX.Element => {
   return (

@@ -15,7 +15,7 @@
         text-align: center;
         font-family: IBM Plex Mono;
 
-        @include respond(tablet) {
+        @include responsive(tablet) {
             font-size: 2.5rem;
         }
     }
@@ -40,7 +40,7 @@
         border: 2px solid var(--color-navy);
         text-align: center;
 
-        @include respond(tablet) {
+        @include responsive(tablet) {
             width: 250px;
             font-size: 1rem;
         }

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { useAuth } from './context/AuthContext'
@@ -32,8 +32,14 @@ const App = (): JSX.Element => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/posts" element={<Posts />} />
+        <Route
+          path="/signin"
+          element={!state.isLogged ? <SignIn /> : <Navigate to="/" replace />}
+        />
+        <Route
+          path="/posts"
+          element={state.isLogged ? <Posts /> : <Navigate to="/" replace />}
+        />
         <Route path="/error" element={<ErrorPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

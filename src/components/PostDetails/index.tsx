@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { CgCloseR } from 'react-icons/cg'
 import { usePost } from '../../context/PostContext'
 import { Post } from '../../types/post'
 import Button from '../Button'
 import EditPost from '../EditPost'
 import ReactPortal from '../ReactPortal'
-import style from './_styles.module.scss'
+import style from './styles.module.scss'
 
 interface Props {
   post: Post
@@ -15,6 +16,7 @@ interface Props {
 const PostDetails = ({ post, handleClose }: Props): JSX.Element => {
   const [edit, setEdit] = useState(false)
   const { dispatch } = usePost()
+  const [t] = useTranslation('global')
 
   const handleDelete = (): void => {
     dispatch({ type: 'delete', payload: { id: post.id } })
@@ -30,13 +32,15 @@ const PostDetails = ({ post, handleClose }: Props): JSX.Element => {
           <CgCloseR
             className={style.dialog__close__icon}
             onClick={handleClose}
-            title="Cerrar"
+            title={t('posts.card.buttons.close')!}
           />
         </div>
         {!edit ? (
-          <h1 className={style.dialog__title}>Detalles</h1>
+          <h1 className={style.dialog__title}>
+            {t('posts.card.titles.details')}
+          </h1>
         ) : (
-          <h1 className={style.dialog__title}>Editar Post</h1>
+          <h1 className={style.dialog__title}>{t('posts.card.titles.edit')}</h1>
         )}
         <section className={style.content}>
           {!edit ? (
@@ -46,13 +50,13 @@ const PostDetails = ({ post, handleClose }: Props): JSX.Element => {
               <div className={style.content__actions}>
                 <Button
                   category="basic"
-                  text="Editar"
+                  text={t('posts.card.buttons.edit')}
                   type="button"
                   handleClick={() => setEdit(true)}
                 />
                 <Button
                   category="basic"
-                  text="Eliminar"
+                  text={t('posts.card.buttons.delete')}
                   type="button"
                   handleClick={handleDelete}
                 />

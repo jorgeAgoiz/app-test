@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { usePost } from '../context/PostContext'
 import { UseEdit } from '../types/hooks'
 
@@ -17,6 +18,7 @@ interface Props {
 
 const useEdit = ({ id, title, body, onCancel }: Props): UseEdit => {
   const { dispatch } = usePost()
+  const [t, i18n] = useTranslation('global')
   const [newTitle, setNewTitle] = useState<State['newTitle']>(title)
   const [newBody, setNewBody] = useState<State['newBody']>(body)
   const [error, setError] = useState<State['error']>(null)
@@ -38,12 +40,10 @@ const useEdit = ({ id, title, body, onCancel }: Props): UseEdit => {
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>): void => {
     evt.preventDefault()
     if (newTitle.length < 3) {
-      return setError('Debe introducir como mínimo 3 carácteres en el título')
+      return setError(t('posts.edit.error.title'))
     }
     if (newBody.length < 10) {
-      return setError(
-        'Debe introducir como mínimo 10 carácteres en el contenido del post'
-      )
+      return setError(t('posts.edit.error.body'))
     }
     setError(null)
     dispatch({

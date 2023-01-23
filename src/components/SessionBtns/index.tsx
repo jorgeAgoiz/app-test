@@ -1,13 +1,15 @@
+import { useTranslation } from 'react-i18next'
 import { RxAvatar } from 'react-icons/rx'
 import { NavigateFunction, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import { FAKE_AVATAR } from '../../utils/constants'
 import Button from '../Button'
-import style from './_styles.module.scss'
+import style from './styles.module.scss'
 
 const SessionBtns = (): JSX.Element => {
   const { state, dispatch } = useAuth()
   const navigate: NavigateFunction = useNavigate()
+  const [t] = useTranslation('global')
 
   const handleClick = (): void => {
     if (!state.isLogged) {
@@ -32,7 +34,11 @@ const SessionBtns = (): JSX.Element => {
       <Button
         category="session"
         handleClick={handleClick}
-        text={!state.isLogged ? 'Iniciar Sesión' : 'Cerrar sesión'}
+        text={
+          !state.isLogged
+            ? t('header.buttons.login')
+            : t('header.buttons.logout')
+        }
         type="button"
       />
     </div>

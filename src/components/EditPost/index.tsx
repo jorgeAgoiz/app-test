@@ -1,6 +1,7 @@
+import { useTranslation } from 'react-i18next'
 import useEdit from '../../hooks/useEdit'
 import Button from '../Button'
-import style from './_styles.module.scss'
+import style from './styles.module.scss'
 
 interface Props {
   id: number
@@ -16,6 +17,7 @@ const EditPost = ({ id, title, body, onCancel }: Props): JSX.Element => {
     body,
     onCancel,
   })
+  const [t] = useTranslation('global')
 
   return (
     <form className={style.form} onSubmit={handleSubmit}>
@@ -36,10 +38,14 @@ const EditPost = ({ id, title, body, onCancel }: Props): JSX.Element => {
         className={style.form__content}
       />
       <div className={style.form__actions}>
-        <Button category="basic" text="Guardar" type="submit" />
         <Button
           category="basic"
-          text="Cancelar"
+          text={t('posts.edit.buttons.save')}
+          type="submit"
+        />
+        <Button
+          category="basic"
+          text={t('posts.edit.buttons.cancel')}
           type="button"
           handleClick={onCancel}
         />

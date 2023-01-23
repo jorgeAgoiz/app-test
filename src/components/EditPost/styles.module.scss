@@ -16,7 +16,7 @@
         padding: 5px;
         border: 2px solid var(--color-navy);
 
-        @include respond(tablet) {
+        @include responsive(tablet) {
             width: 280px;
             font-size: 1rem;
         }
@@ -31,7 +31,7 @@
         padding: 5px;
         border: 2px solid var(--color-navy);
 
-        @include respond(tablet) {
+        @include responsive(tablet) {
             width: 280px;
             font-size: 1rem;
         }
@@ -46,7 +46,7 @@
         align-items: center;
         flex-wrap: wrap;
 
-        @include respond(tablet) {
+        @include responsive(tablet) {
             gap: 2.5rem;
         }
     }

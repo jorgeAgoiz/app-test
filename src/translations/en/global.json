@@ -1,0 +1,74 @@
+{
+    "header": {
+        "titles": {
+            "logo_web": "Go to the website",
+            "home": "Home",
+            "posts": "Posts"
+        },
+        "buttons": {
+            "login": "Sign In",
+            "logout": "Sign Out"
+        }
+    },
+    "footer": {
+        "signature": {
+            "part_one": "Made with",
+            "part_two": "by Jorge Agoiz"
+        },
+        "language": {
+            "spanish_btn": "Spanish",
+            "english_btn": "English",
+            "text": "Change Language:"
+        }
+    },
+    "login_form": {
+        "error": "Enter a valid email",
+        "title": "Sign In",
+        "placeholders": {
+            "email": "Email",
+            "password": "Password"
+        },
+        "button": "Sign In"
+    },
+    "error_page": {
+        "title": "Something went wrong..."
+    },
+    "not_found_page": {
+        "title": "Page not found..."
+    },
+    "posts": {
+        "list": {
+            "title": "Posts List",
+            "buttons": {
+                "next_page": "Next Page",
+                "previous_page": "Previous Page"
+            },
+            "pagination_text": {
+                "part_one": "Page",
+                "part_two": "of"
+            }
+        },
+        "edit": {
+            "error": {
+                "body": "You must enter at least 10 characters in the content of the post",
+                "title": "You must enter at least 3 characters in the title"            
+            },
+            "buttons": {
+                "save": "Save",
+                "cancel": "Cancel"
+            }
+        },
+        "card": {
+            "buttons": {
+                "details": "Details",
+                "edit": "Edit",
+                "delete": "Delete",
+                "close": "Close"
+            },
+            "titles": {
+                "details": "Details",
+                "edit": "Edit Post"
+            }
+        }
+    }
+}

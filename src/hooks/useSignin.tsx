@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { NavigateFunction, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { UseSignIn } from '../types/hooks'
@@ -16,6 +17,7 @@ const useSignIn = (): UseSignIn => {
   const [email, setEmail] = useState<State['email']>('')
   const [password, setPassword] = useState<State['password']>('')
   const [error, setError] = useState<State['error']>(null)
+  const [t] = useTranslation('global')
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>): void => {
     const { name } = evt.currentTarget
@@ -30,7 +32,7 @@ const useSignIn = (): UseSignIn => {
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>): void => {
     evt.preventDefault()
     if (!emailValidator(email)) {
-      return setError('Introduzca un correo electronico válido')
+      return setError(t('login_form.error'))
     }
     setError(null)
     dispatch({

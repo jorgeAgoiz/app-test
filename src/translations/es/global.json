@@ -1,0 +1,74 @@
+{
+    "header": {
+        "titles": {
+            "logo_web": "Ir a la web",
+            "home": "Inicio",
+            "posts": "Posts"
+        },
+        "buttons": {
+            "login": "Iniciar Sesión",
+            "logout": "Cerrar Sesión"
+        }
+    },
+    "footer": {
+        "signature": {
+            "part_one": "Hecho con",
+            "part_two": "por Jorge Agoiz"
+        },
+        "language": {
+            "spanish_btn": "Español",
+            "english_btn": "Inglés",
+            "text": "Cambiar Idioma:"
+        }
+    },
+    "login_form": {
+        "error": "Introduzca un correo electrónico válido",
+        "title": "Iniciar Sesión",
+        "placeholders": {
+            "email": "Correo Electrónico",
+            "password": "Contraseña"
+        },
+        "button": "Iniciar Sesión"
+    },
+    "error_page": {
+        "title": "Algo no ha ido bien..."
+    },
+    "not_found_page": {
+        "title": "Página no encontrada..."
+    },
+    "posts": {
+        "list": {
+            "title": "Listado De Posts",
+            "buttons": {
+                "next_page": "Siguiente Página",
+                "previous_page": "Página Anterior"
+            },
+            "pagination_text": {
+                "part_one": "Página",
+                "part_two": "de"
+            }
+        },
+        "edit": {
+            "error": {
+                "body": "Debe introducir como mínimo 10 carácteres en el contenido del post",
+                "title": "Debe introducir como mínimo 3 carácteres en el título"            
+            },
+            "buttons": {
+                "save": "Guardar",
+                "cancel": "Cancelar"
+            }
+        },
+        "card": {
+            "buttons": {
+                "details": "Detalles",
+                "edit": "Editar",
+                "delete": "Eliminar",
+                "close": "Cerrar"
+            },
+            "titles": {
+                "details": "Detalles",
+                "edit": "Editar Post"
+            }
+        }
+    }
+}

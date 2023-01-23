@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind'
 import { ReactNode } from 'react'
-import style from './_styles.module.scss'
+import style from './styles.module.scss'
 let cx = classNames.bind(style)
 
 interface Props {

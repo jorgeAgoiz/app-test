@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Post } from '../../types/post'
 import Button from '../Button'
 import PostDetails from '../PostDetails'
-import style from './_styles.module.scss'
+import style from './styles.module.scss'
 
 interface State {
   modal: boolean
@@ -13,6 +14,7 @@ interface Props {
 
 const PostCard = ({ post }: Props): JSX.Element => {
   const [modal, setModal] = useState<State['modal']>(false)
+  const [t] = useTranslation('global')
 
   const handleClick = (): void => {
     setModal(true)
@@ -25,7 +27,7 @@ const PostCard = ({ post }: Props): JSX.Element => {
         <p className={style.post__body}>{post.body}</p>
         <Button
           category="basic"
-          text="Detalles"
+          text={t('posts.card.buttons.details')}
           type="button"
           handleClick={handleClick}
         />
