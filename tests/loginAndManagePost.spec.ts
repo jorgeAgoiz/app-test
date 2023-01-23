@@ -8,6 +8,8 @@ let server: PreviewServer
 let browser: Browser
 let page: Page
 
+const URL: string = 'http://127.0.0.1:5173/'
+
 describe('Testing the application', (): void => {
   beforeEach(async (): Promise<void> => {
     server = await preview({ preview: { port: 3000 } })
@@ -23,7 +25,7 @@ describe('Testing the application', (): void => {
   })
 
   test('LOGIN AND EDIT POST', async (): Promise<void> => {
-    await page.goto('http://127.0.0.1:5173/')
+    await page.goto(URL)
 
     // Check the language
     await page
@@ -72,7 +74,7 @@ describe('Testing the application', (): void => {
   }, 60_000)
 
   test('LOGIN AND DELETE A POST', async (): Promise<void> => {
-    await page.goto('http://127.0.0.1:5173/')
+    await page.goto(URL)
 
     // Check the language
     await page
