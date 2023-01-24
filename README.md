@@ -59,6 +59,11 @@ npm run build
 npm run preview
 ```
 
+## Anotaciones :notebook_with_decorative_cover:
+
+Adjunto un archivo con anotaciones de algunas cosas que quizá se podría haber planteado de otra forma:
+[NICETOHAVE.md](https://github.com/jorgeAgoiz/app-test/blob/main/NICETOHAVE.md)
+
 ## Autor ✒️
 
 ##### Jorge Agoiz Pedraja
