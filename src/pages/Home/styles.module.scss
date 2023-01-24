@@ -1,20 +1,20 @@
-@use '../../sass/_mixins.scss' as *;
+@import '../../sass/_mixins.scss';
 
 .main {
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 
-    &__title {
-        font-size: 5rem;
-        text-align: center;
-        font-family: IBM Plex Mono;
+  &__title {
+    font-size: 5rem;
+    text-align: center;
+    font-family: IBM Plex Mono;
 
-        @include responsive(tablet) {
-            font-size: 2rem;
-        }
+    @include responsive(tablet) {
+      font-size: 2rem;
     }
+  }
 }

@@ -36,10 +36,7 @@ const App = (): JSX.Element => {
           path="/signin"
           element={!state.isLogged ? <SignIn /> : <Navigate to="/" replace />}
         />
-        <Route
-          path="/posts"
-          element={state.isLogged ? <Posts /> : <Navigate to="/" replace />}
-        />
+        <Route path="/posts" element={state.isLogged ? <Posts /> : <Home />} />
         <Route path="/error" element={<ErrorPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

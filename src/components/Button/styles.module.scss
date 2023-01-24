@@ -1,4 +1,4 @@
-@use '../../sass/_mixins.scss' as *;
+@import '../../sass/_mixins.scss';
 
 .basic {
   font-size: 1rem;
@@ -18,7 +18,7 @@
   font-family: IBM Plex Mono;
 
   &:after {
-    content: "";
+    content: '';
     background-color: var(--color-teal);
     width: 100%;
     z-index: -1;
@@ -60,7 +60,7 @@
   @include responsive(mobile) {
     width: 110px;
     height: 40px;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -70,7 +70,7 @@
   height: 3rem;
   border: 3px solid var(--color-black);
   border-radius: 0.7rem;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 
   &__icon {
     width: 1.6rem;

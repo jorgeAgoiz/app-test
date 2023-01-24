@@ -1,46 +1,46 @@
-@use '../../sass/_animations.scss' as *;
-@use '../../sass/_mixins.scss' as *;
+@import '../../sass/_mixins.scss';
+@import '../../sass/_animations.scss';
 
 .footer {
-    width: 100%;
-    background-color: var(--color-teal);
-    position: fixed;
-    bottom: 0;
-    text-align: center;
+  width: 100%;
+  background-color: var(--color-teal);
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  padding: 0.3rem;
+  z-index: 2;
+
+  @include responsive(tablet) {
+    gap: 2rem;
+  }
+
+  &__language {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
     justify-content: center;
-    gap: 3rem;
     align-items: center;
-    padding: 0.3rem;
-    z-index: 2;
+  }
 
-    @include responsive(tablet) {
-        gap: 2rem;
+  &__text {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    font-family: Farsan;
+
+    @include responsive(mobile) {
+      font-size: 1.2rem;
     }
+  }
 
-    &__language {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__text {
-        color: var(--color-white);
-        font-size: 1.3rem;
-        font-family: Farsan;
-
-        @include responsive(mobile) {
-            font-size: 1.2rem;
-        }
-    }
-
-    &__icon {
-        width: 25px;
-        height: 25px;
-        color: var(--color-error);
-        animation: 1.2s infinite alternate beats;
-    }
+  &__icon {
+    width: 25px;
+    height: 25px;
+    color: var(--color-error);
+    animation: 1.2s infinite alternate beats;
+  }
 }

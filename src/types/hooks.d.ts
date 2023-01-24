@@ -1,4 +1,4 @@
-export interface UseSignIn {
+export interface UseSignin {
   handleChange: (evt: React.ChangeEvent<HTMLInputElement>) => void
   handleSubmit: (evt: React.FormEvent<HTMLFormElement>) => void
   error: string | null

@@ -26,7 +26,7 @@ const PostCard = ({ post }: Props): JSX.Element => {
         <h1 className={style.post__title}>{post.title}</h1>
         <p className={style.post__body}>{post.body}</p>
         <Button
-          category="basic"
+          variant="basic"
           text={t('posts.card.buttons.details')}
           type="button"
           handleClick={handleClick}

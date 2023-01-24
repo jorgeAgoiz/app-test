@@ -47,6 +47,9 @@ const PostDetails = ({ post, handleClose }: Props): JSX.Element => {
         <section className={style.content}>
           {!edit ? (
             <>
+              <h1 className={style.content__title}>
+                {`${t('posts.card.titles.user_id')} ${post.userId}`}
+              </h1>
               <h1
                 role="heading"
                 aria-label="Título del Post"
@@ -63,14 +66,14 @@ const PostDetails = ({ post, handleClose }: Props): JSX.Element => {
               </h2>
               <div className={style.content__actions}>
                 <Button
-                  category="basic"
+                  variant="basic"
                   text={t('posts.card.buttons.edit')}
                   type="button"
                   handleClick={() => setEdit(true)}
                   ariaLabel="Editar el Post"
                 />
                 <Button
-                  category="basic"
+                  variant="basic"
                   text={t('posts.card.buttons.delete')}
                   type="button"
                   handleClick={handleDelete}

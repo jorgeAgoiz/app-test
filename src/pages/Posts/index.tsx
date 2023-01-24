@@ -47,7 +47,7 @@ const Posts = (): JSX.Element => {
             handleClick={handlePrevious}
             disabled={currentPage <= 1}
             type="button"
-            category="pagination"
+            variant="pagination"
             ariaLabel="Página Anterior"
           >
             <GrLinkPrevious className={style.pagination__icon} />
@@ -62,7 +62,7 @@ const Posts = (): JSX.Element => {
             handleClick={handleNext}
             disabled={currentPage === Math.ceil(state.posts.length / PER_PAGE)}
             type="button"
-            category="pagination"
+            variant="pagination"
             ariaLabel="Siguiente Página"
           >
             <GrLinkNext className={style.pagination__icon} />

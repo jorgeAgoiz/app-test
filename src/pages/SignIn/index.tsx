@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/Button'
-import useSignIn from '../../hooks/useSignin'
+import useSignin from '../../hooks/useSignin'
 import style from './styles.module.scss'
 
 const SignIn = (): JSX.Element => {
-  const { handleChange, handleSubmit, error } = useSignIn()
+  const { handleChange, handleSubmit, error } = useSignin()
   const [t] = useTranslation('global')
 
   return (
@@ -29,11 +29,11 @@ const SignIn = (): JSX.Element => {
         />
         <Button
           ariaLabel="Entrar"
-          category="basic"
+          variant="basic"
           text={t('login_form.button')}
           type="submit"
         />
-        {error && <p className={style.form__error}>{error}</p>}
+        {error && <p className={style.form__error}>{t(error)}</p>}
       </form>
     </main>
   )

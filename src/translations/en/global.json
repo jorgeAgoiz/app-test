@@ -1,7 +1,7 @@
 {
     "header": {
         "titles": {
-            "logo_web": "Go to the website",
+            "logo": "Cleverpy",
             "home": "Home",
             "posts": "Posts"
         },
@@ -71,7 +71,8 @@
             },
             "titles": {
                 "details": "Details",
-                "edit": "Edit Post"
+                "edit": "Edit Post",
+                "user_id": "User ID: "
             }
         }
     }

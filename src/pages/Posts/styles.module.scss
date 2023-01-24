@@ -1,67 +1,64 @@
-@use '../../sass/_mixins.scss' as *;
+@import '../../sass/_mixins.scss';
 
 .main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5rem;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 1rem;
 
-    @include responsive(tablet) {
-        margin-bottom: 12rem;
-    }
+  @include responsive(tablet) {
+    margin-bottom: 12rem;
+  }
 }
 
 .title {
-    font-size: 2rem;
-    font-family: IBM Plex Mono;
+  font-size: 2rem;
+  font-family: IBM Plex Mono;
 
-    @include responsive(mobile) {
-        font-size: 1rem;
-    }
+  @include responsive(mobile) {
+    font-size: 1rem;
+  }
 }
 
 .list {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .pagination {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    justify-content: center;
-    align-items: center;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  @include responsive(mobile) {
+    width: 100%;
+    gap: 1.4rem;
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    color: var(--color-navy);
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: IBM Plex Mono;
 
     @include responsive(mobile) {
-        width: 100%;
-        gap: 1.4rem;
+      font-size: 1rem;
     }
-
-
-
-    &__icon {
-        width: 1.6rem;
-        height: 1.6rem;
-        color: var(--color-navy);
-    }
-
-
-    &__text {
-        font-size: 1.2rem;
-        font-weight: bold;
-        font-family: IBM Plex Mono;
-
-        @include responsive(mobile) {
-            font-size: 1rem;
-        }
-    }
+  }
 }

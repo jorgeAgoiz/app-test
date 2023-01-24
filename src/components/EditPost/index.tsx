@@ -41,13 +41,13 @@ const EditPost = ({ id, title, body, onCancel }: Props): JSX.Element => {
       />
       <div className={style.form__actions}>
         <Button
-          category="basic"
+          variant="basic"
           text={t('posts.edit.buttons.save')}
           type="submit"
           ariaLabel="Guardar cambios"
         />
         <Button
-          category="basic"
+          variant="basic"
           text={t('posts.edit.buttons.cancel')}
           type="button"
           handleClick={onCancel}

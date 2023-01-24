@@ -19,8 +19,6 @@ export const AuthContext = createContext<{
 const authReducer = (state: AuthState, action: AuthAction) => {
   switch (action.type) {
     case 'login': {
-      sessionStorage.setItem('email', action.payload.email!)
-      sessionStorage.setItem('password', action.payload.password!)
       return {
         ...state,
         isLogged: true,
@@ -29,8 +27,6 @@ const authReducer = (state: AuthState, action: AuthAction) => {
       }
     }
     case 'logout': {
-      sessionStorage.removeItem('email')
-      sessionStorage.removeItem('password')
       return {
         isLogged: false,
         email: '',

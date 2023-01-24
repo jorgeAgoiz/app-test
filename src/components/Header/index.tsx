@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { RiFileList2Line, RiHome2Fill } from 'react-icons/ri'
 import { Link, Location, useLocation } from 'react-router-dom'
-import logoImage from '../../assets/cleverpy-logo.jpg'
+import logoImage from '../../assets/images/cleverpy-logo.jpg'
 import { useAuth } from '../../context/AuthContext'
 import SessionBtns from '../SessionBtns'
 import style from './styles.module.scss'
@@ -13,13 +13,12 @@ const Header = (): JSX.Element => {
 
   return (
     <header className={style.header}>
-      <a href="https://cleverpy.com/">
-        <img
-          src={logoImage}
-          className={style.header__logo}
-          title={t('header.titles.logo_web')!}
-        />
-      </a>
+      <img
+        src={logoImage}
+        className={style.header__logo}
+        title={t('header.titles.logo')!}
+        alt="Logo Image"
+      />
       {location.pathname === '/' && state.isLogged ? (
         <Link to="/posts">
           <RiFileList2Line

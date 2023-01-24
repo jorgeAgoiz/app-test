@@ -18,7 +18,7 @@ interface Props {
 
 const useEdit = ({ id, title, body, onCancel }: Props): UseEdit => {
   const { dispatch } = usePost()
-  const [t, i18n] = useTranslation('global')
+  const [t] = useTranslation('global')
   const [newTitle, setNewTitle] = useState<State['newTitle']>(title)
   const [newBody, setNewBody] = useState<State['newBody']>(body)
   const [error, setError] = useState<State['error']>(null)

@@ -1,20 +1,19 @@
 @mixin responsive($breakpoint) {
-
-  @if($breakpoint ==desktop) {
+  @if ($breakpoint == 'desktop') {
     @media (max-width: 900px) {
-      @content
+      @content;
     }
   }
 
-  @if($breakpoint ==tablet) {
+  @if ($breakpoint == 'tablet') {
     @media (max-width: 660px) {
-      @content
+      @content;
     }
   }
 
-  @if($breakpoint ==mobile) {
+  @if ($breakpoint == 'mobile') {
     @media (max-width: 450px) {
-      @content
+      @content;
     }
   }
 }

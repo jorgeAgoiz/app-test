@@ -1,31 +1,31 @@
-@use '../../sass/_mixins.scss' as *;
+@import '../../sass/_mixins.scss';
 
 .post {
-    width: 280px;
-    height: 480px;
-    padding: 1.2rem;
-    background-color: var(--color-beige);
-    border-radius: 12px;
-    border: 2px solid var(--color-black);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    transition: .3s background-color ease-in-out;
+  width: 280px;
+  height: 480px;
+  padding: 1.2rem;
+  background-color: var(--color-beige);
+  border-radius: 12px;
+  border: 2px solid var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s background-color ease-in-out;
 
-    &:hover {
-        background-color: var(--color-white);
-    }
+  &:hover {
+    background-color: var(--color-white);
+  }
 
-    &__title {
-        font-size: 1.3rem;
-        text-align: center;
-        font-family: Aldrich;
-    }
+  &__title {
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: Aldrich;
+  }
 
-    &__body {
-        text-align: justify;
-        font-size: 1.1rem;
-        font-family: Lekton;
-    }
+  &__body {
+    text-align: justify;
+    font-size: 1.1rem;
+    font-family: Lekton;
+  }
 }

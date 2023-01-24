@@ -8,7 +8,7 @@ interface Props {
   type: 'button' | 'submit' | 'reset' | undefined
   handleClick?: () => void
   disabled?: boolean
-  category: 'session' | 'basic' | 'pagination'
+  variant: 'session' | 'basic' | 'pagination'
   children?: ReactNode
   ariaLabel?: string
 }
@@ -18,14 +18,14 @@ const Button = ({
   type = 'button',
   handleClick,
   disabled = false,
-  category,
+  variant,
   children,
   ariaLabel,
 }: Props): JSX.Element => {
   const className: string = cx({
-    session: category === 'session',
-    basic: category === 'basic',
-    pagination: category === 'pagination',
+    session: variant === 'session',
+    basic: variant === 'basic',
+    pagination: variant === 'pagination',
   })
 
   return (

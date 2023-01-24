@@ -16,6 +16,8 @@ const SessionBtns = (): JSX.Element => {
       return navigate('/signin', { replace: true })
     } else {
       dispatch({ type: 'logout', payload: {} })
+      sessionStorage.removeItem('email')
+      sessionStorage.removeItem('password')
       return navigate('/', { replace: true })
     }
   }
@@ -33,7 +35,7 @@ const SessionBtns = (): JSX.Element => {
         />
       )}
       <Button
-        category="session"
+        variant="session"
         ariaLabel={!state.isLogged ? 'Iniciar Sesión' : 'Cerrar Sesión'}
         handleClick={handleClick}
         text={
