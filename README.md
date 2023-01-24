@@ -1,6 +1,5 @@
 # POSTS APP
 
-#### Cleverpy
 
 ## Tecnologías 🚀
 
