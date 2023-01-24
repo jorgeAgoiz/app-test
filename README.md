@@ -42,6 +42,7 @@ npm run dev
 Para la verificación de los test:
 
 ```
+npm run dev
 npm run test
 ```
 
